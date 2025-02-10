@@ -20,8 +20,10 @@ Steno is a VS Code extension that allows developers to speak their code, and it 
 git clone https://github.com/yourusername/steno.git
 cd steno
 ```
-# Install dependencies
+### Install dependencies
+```sh
 npm install
+```
 
 ## How to Use
 
