@@ -1,71 +1,33 @@
-# steno README
+# Steno - AI-Powered Speech-to-Code for VS Code
 
-This is the README for your extension "steno". After writing up a brief description, we recommend including the following sections.
+Steno is a VS Code extension that allows developers to speak their code, and it automatically transcribes and formats it based on the current file type using OpenAI's Whisper and GPT-4 APIs.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- Convert Speech to Code: Speak your code, and it gets typed into VS Code automatically.
+- AI-Powered Formatting: GPT-4 ensures proper syntax based on the current file type.
+- Secure API Key Management: Store your OpenAI API key securely inside VS Code.
+- Test API Key in UI: Check if your API key is valid before saving it.
+- Works for Multiple Languages: Supports Python, JavaScript, C++, Java, C#, Go, Rust, Swift, and more.
+- Web UI for Configuration: Manage API keys easily via a VS Code Webview.
+- Real-time Feedback: Shows recording status and API validation results in UI.
 
-For example if there is an image subfolder under your extension project workspace:
+## Installation
 
-\!\[feature X\]\(images/feature-x.png\)
+### Clone the repository
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+```sh
+git clone https://github.com/yourusername/steno.git
+cd steno
+```
+# Install dependencies
+npm install
 
-## Requirements
+## How to Use
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- Open a programming file in VS Code (`.py`, `.js`, `.cpp`, etc.).
+- Open the **Command Palette** (`Ctrl+Shift+P` on Windows/Linux, `Cmd+Shift+P` on macOS).
+- Search for **"Steno"** and select it.
+- Enter your **OpenAI API Key** in the provided field.
+- Speak your code in a structured format, for example: function open braces int a comma int b close braces open parenthesis return a plus b close parenthesis
+  
