@@ -2,7 +2,7 @@
   "name": "whispercode",
   "displayName": "WhisperCode - Speech to Code",
   "description": "An AI-powered VS Code extension that converts speech into formatted code.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "SubramanyaJagadeesh",
   "engines": {
     "vscode": "^1.97.0"

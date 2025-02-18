@@ -10,19 +10,6 @@ Steno is a VS Code extension that allows developers to speak their code, and it 
 - Works for Multiple Languages: Supports Python, JavaScript, C++, Java, C#, Go, Rust, Swift, and more.
 - Real-time Feedback: Shows recording status and API validation results in UI.
 
-## Installation
-
-### Clone the repository
-
-```sh
-git clone https://github.com/yourusername/steno.git
-cd steno
-```
-### Install dependencies
-```sh
-npm install
-```
-
 ## How to Use
 - Install Extension
 - Install SoX(Sound eXchange)

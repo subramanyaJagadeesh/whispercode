@@ -39,7 +39,6 @@ export function activate(context: vscode.ExtensionContext) {
             }
         }
 
-        vscode.window.showInformationMessage('Recording... Speak your code!');
         const editor = vscode.window.activeTextEditor;
 
         const fileType = detectFileType(editor?.document.fileName || 'Python');
