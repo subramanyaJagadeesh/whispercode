@@ -9,7 +9,7 @@ export let OPENAI_API_KEY = '';
 
 export function activate(context: vscode.ExtensionContext) {
     const statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
-    statusBarItem.text = "$(mic) STC";
+    statusBarItem.text = "$(mic) WhisperCode";
     statusBarItem.tooltip = "Speech-to-Code";
     statusBarItem.command = "steno.showMenu";
     statusBarItem.show();
