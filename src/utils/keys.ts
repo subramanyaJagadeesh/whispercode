@@ -2,17 +2,17 @@ import OpenAI from 'openai';
 import { OPENAI_API_KEY } from '../extension';
 import * as vscode from 'vscode';
 
-const SECRET_KEY = "openai-api-key"; // Key for storing API key securely
+const SECRET_KEY = "openai-api-key"; 
 
 
 export async function isValidApiKey(): Promise<boolean> {
     try {
         const openai = new OpenAI({ apiKey:OPENAI_API_KEY });
-        await openai.models.list(); // Test API call to fetch available models
-        return true; // API key is valid
+        await openai.models.list(); 
+        return true; 
     } catch (error) {
         console.error("Invalid OpenAI API Key:", error);
-        return false; // API key is invalid
+        return false; 
     }
 }
 

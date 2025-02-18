@@ -13,7 +13,6 @@ export async function generateCodeFromSpeech(transcribedText: string, fileType: 
 
         let generatedCode = response.choices[0]?.message?.content?.trim() || "";
 
-        // 🔹 Remove triple backticks and language specifier (e.g., "typescript")
         generatedCode = generatedCode.replace(/```[\w]*\n?/g, "").trim();
 
         return generatedCode;

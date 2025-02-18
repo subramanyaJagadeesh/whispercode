@@ -1,6 +1,6 @@
 {
-  "name": "stc",
-  "displayName": "Speech to Code",
+  "name": "whispercode",
+  "displayName": "WhisperCode - Speech to Code",
   "description": "An AI-powered VS Code extension that converts speech into formatted code.",
   "version": "1.0.1",
   "publisher": "SubramanyaJagadeesh",

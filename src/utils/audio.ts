@@ -18,17 +18,15 @@ export async function recordAudio(filePath: string): Promise<void> {
             mic.stopRecording();
             vscode.window.showInformationMessage('🎤 Recording stopped.');
             resolve();
-            // Verify the file exists and has data
             if (!fs.existsSync(filePath) || fs.statSync(filePath).size === 0) {
                 console.error("❌ Error: Recorded file is empty or missing!");
             } else {
                 console.log(`✅ Audio recorded successfully: ${filePath}`);
             }
-        }, 10000); // Stop recording after 5 seconds
+        }, 10000);
     });
 }
 
-// ✅ Function to Transcribe Audio Using OpenAI Whisper API
 export async function transcribeAudio(filePath: string, apiKey: string): Promise<string | null> {
     try {
         if (!fs.existsSync(filePath)) {
@@ -40,11 +38,9 @@ export async function transcribeAudio(filePath: string, apiKey: string): Promise
             throw new Error(`Audio file is empty or corrupted: ${filePath}`);
         }
 
-        // Log file extension to debug format issues
         const fileExtension = path.extname(filePath).toLowerCase();
         console.warn(`Audio file format: ${fileExtension}`);
 
-        // Ensure it's one of OpenAI's accepted formats
         const allowedFormats = [".flac", ".m4a", ".mp3", ".mp4", ".mpeg", ".mpga", ".oga", ".ogg", ".wav", ".webm"];
         if (!allowedFormats.includes(fileExtension)) {
             throw new Error(`Unsupported file format: ${fileExtension}`);
