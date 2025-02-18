@@ -6,12 +6,31 @@ import { recordAudio, transcribeAudio } from './utils/audio';
 import { generateCodeFromSpeech } from './utils/code';
 
 export let OPENAI_API_KEY = '';
-// const OPENAI_API_KEY = ""; // Replace with your API key
 
 export function activate(context: vscode.ExtensionContext) {
+    const statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
+    statusBarItem.text = "$(mic) STC";
+    statusBarItem.tooltip = "Speech-to-Code";
+    statusBarItem.command = "steno.showMenu";
+    statusBarItem.show();
+    
+    context.subscriptions.push(statusBarItem);
+
+    let showMenuCmd = vscode.commands.registerCommand("steno.showMenu", async () => {
+        const selected = await vscode.window.showQuickPick(["Change API Key", "Start Speech-to-Code"], {
+            placeHolder: "Select an option"
+        });
+
+        if (selected === "Change API Key") {
+            await promptForApiKey(context);
+        } else if (selected === "Start Speech-to-Code") {
+            vscode.commands.executeCommand("steno.steno");
+        }
+    });
+
+    context.subscriptions.push(showMenuCmd);
     let disposable = vscode.commands.registerCommand('steno.steno', async () => {
         OPENAI_API_KEY = await getApiKey(context);
-
         if (!OPENAI_API_KEY) {
             OPENAI_API_KEY = await promptForApiKey(context);
             if(!await isValidApiKey()){

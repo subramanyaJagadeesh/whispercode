@@ -1,21 +1,24 @@
 {
-  "name": "steno",
-  "displayName": "steno",
-  "description": "",
-  "version": "0.0.1",
+  "name": "stc",
+  "displayName": "Speech to Code",
+  "description": "An AI-powered VS Code extension that converts speech into formatted code.",
+  "version": "1.0.1",
+  "publisher": "SubramanyaJagadeesh",
   "engines": {
     "vscode": "^1.97.0"
   },
   "categories": [
+    "Programming Languages",
     "Other"
   ],
+  "icon": "icon.png",
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
         "command": "steno.steno",
-        "title": "Steno"
+        "title": "STC"
       }
     ]
   },

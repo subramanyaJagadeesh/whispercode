@@ -11,7 +11,12 @@ export async function generateCodeFromSpeech(transcribedText: string, fileType: 
             ]
         });
 
-        return response.choices[0].message.content;
+        let generatedCode = response.choices[0]?.message?.content?.trim() || "";
+
+        // 🔹 Remove triple backticks and language specifier (e.g., "typescript")
+        generatedCode = generatedCode.replace(/```[\w]*\n?/g, "").trim();
+
+        return generatedCode;
     } catch (error) {
         console.error("GPT-4 API Error:", error);
         return null;
