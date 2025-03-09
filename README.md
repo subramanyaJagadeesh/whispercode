@@ -1,6 +1,6 @@
-# Steno - AI-Powered Speech-to-Code for VS Code
+# WhisperCode - AI-Powered Speech-to-Code for VS Code
 
-Steno is a VS Code extension that allows developers to speak their code, and it automatically transcribes and formats it based on the current file type using OpenAI's Whisper and GPT-4 APIs.
+WhisperCode is a VS Code extension that allows developers to speak their code, and it automatically transcribes and formats it based on the current file type using OpenAI's Whisper and GPT-4 APIs.
 
 ## Features
 
